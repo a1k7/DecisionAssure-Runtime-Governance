@@ -1,0 +1,10 @@
+{
+  "event_id": "evt_1024",
+  "workflow": "aml_transfer",
+  "initial_status": "ADMISSIBLE",
+  "runtime_status": "COMMIT_INELIGIBLE",
+  "reason_codes": [
+    "AUTHORITY_DRIFT",
+    "REVALIDATION_REQUIRED"
+  ]
+}
