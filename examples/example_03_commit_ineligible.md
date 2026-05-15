@@ -1,0 +1,27 @@
+
+# Commit Ineligible Transition
+
+## Initial State
+
+FULLY_ADMISSIBLE
+
+## Runtime Events
+
+- POLICY_CHANGED
+- KYC_CONTEXT_STALE
+- DELEGATION_CHAIN_CHANGED
+
+## Transition
+
+FULLY_ADMISSIBLE
+→ OBSERVABLE_BUT_INADMISSIBLE
+→ COMMIT_INELIGIBLE
+
+## Runtime Decision
+
+DENY_BINDING
+
+## Reason Codes
+
+- AUTHORITY_DRIFT
+- EXECUTION_CONTEXT_STALE
