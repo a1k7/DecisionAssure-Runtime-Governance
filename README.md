@@ -10,7 +10,18 @@ DecisionAssure separates:
 - bind integrity
 
 The engine models how execution may remain operational while governance admissibility progressively collapses.
+Research Context & Attribution
 
+DecisionAssure is a runtime governance research project focused on admissibility enforcement, authority-state validation, replay integrity, rollback survivability, and commit-boundary supervision for high-consequence orchestration systems.
+
+Parts of the project’s terminology, transition framing, and architectural direction evolved through technical dialogue around runtime timing coherence, orchestration survivability, and interval-state supervision concepts explored within the RedLINE framework developed by Ashley Lenderman.
+
+DecisionAssure and RedLINE differ in primary focus:
+
+* RedLINE focuses on runtime timing coherence and interval-layer structural analysis.
+* DecisionAssure focuses on governance admissibility, execution-boundary supervision, replay-aware escalation, and deterministic continuation enforcement under degraded orchestration states.
+
+DecisionAssure’s implementation and admissibility framework are being developed within this broader dialogue context, with primary emphasis on governance admissibility rather than timing coherence.
 Research Context
 
 DecisionAssure explores runtime admissibility supervision, orchestration-state validation, and execution-governance enforcement for asynchronous AI workflows.
