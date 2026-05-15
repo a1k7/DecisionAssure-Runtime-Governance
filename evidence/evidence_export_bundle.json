@@ -1,0 +1,344 @@
+[
+    {
+        "evidence_bundle_id": "95ed504a-b947-4833-a3e8-036b089fe3c4",
+        "event": {
+            "event_id": "23cf3b10-14a5-4960-9feb-f6d0a5d465db",
+            "event_type": "POLICY_CHANGED",
+            "node_id": "NODE_A",
+            "timestamp": "2026-05-14 14:33:50.853985+00:00",
+            "severity": "MEDIUM",
+            "authority_source": "governance_engine",
+            "rollback_window_remaining": 1.0,
+            "evidence_hash": "21b39b3329ca6def360493df",
+            "metadata": {}
+        },
+        "runtime_state": "AUTHORITY_RECONSTRUCTION_REQUIRED",
+        "phase_transition": {
+            "from": "FULLY_ADMISSIBLE",
+            "to": "OBSERVABLE_BUT_INADMISSIBLE"
+        },
+        "triggers": [
+            "POLICY_DIVERGENCE",
+            "REVALIDATION_REQUIRED"
+        ],
+        "reason_codes": [],
+        "decision": "REQUIRE_REVALIDATION",
+        "remediation_actions": [],
+        "timestamp": "2026-05-14 14:33:50.854088+00:00"
+    },
+    {
+        "evidence_bundle_id": "c52d3fe8-744e-42fa-855a-eaf9cfd87c61",
+        "event": {
+            "event_id": "04521de6-d759-46a1-b7b8-8a088db724d1",
+            "event_type": "KYC_CONTEXT_STALE",
+            "node_id": "NODE_B",
+            "timestamp": "2026-05-14 14:33:50.854018+00:00",
+            "severity": "HIGH",
+            "authority_source": "governance_engine",
+            "rollback_window_remaining": 1.0,
+            "evidence_hash": "9628eda77101d8b1dcb398f0",
+            "metadata": {}
+        },
+        "runtime_state": "COMMIT_INELIGIBLE",
+        "phase_transition": {
+            "from": "OBSERVABLE_BUT_INADMISSIBLE",
+            "to": "COMMIT_INELIGIBLE"
+        },
+        "triggers": [
+            "STALE_KYC_CONTEXT",
+            "POLICY_DIVERGENCE",
+            "REVALIDATION_REQUIRED",
+            "AUTHORITY_DRIFT"
+        ],
+        "reason_codes": [
+            "AUTHORITY_DRIFT",
+            "EXECUTION_CONTEXT_STALE"
+        ],
+        "decision": "DENY_BINDING",
+        "remediation_actions": [
+            "refresh_kyc_context",
+            "revalidate_authority_evidence",
+            "deny_binding_transition"
+        ],
+        "timestamp": "2026-05-14 14:33:51.059257+00:00"
+    },
+    {
+        "evidence_bundle_id": "3e5844fd-7112-4b90-b47f-d7d775224d1c",
+        "event": {
+            "event_id": "346be5d5-3602-4b69-96a6-f8e932ff06d5",
+            "event_type": "DELEGATION_CHAIN_CHANGED",
+            "node_id": "NODE_B",
+            "timestamp": "2026-05-14 14:33:50.854030+00:00",
+            "severity": "HIGH",
+            "authority_source": "governance_engine",
+            "rollback_window_remaining": 1.0,
+            "evidence_hash": "8011bf3b77cc51e2e9bec3f5",
+            "metadata": {}
+        },
+        "runtime_state": "COMMIT_INELIGIBLE",
+        "phase_transition": {
+            "from": "COMMIT_INELIGIBLE",
+            "to": "COMMIT_INELIGIBLE"
+        },
+        "triggers": [
+            "STALE_KYC_CONTEXT",
+            "POLICY_DIVERGENCE",
+            "REVALIDATION_REQUIRED",
+            "AUTHORITY_DRIFT"
+        ],
+        "reason_codes": [
+            "AUTHORITY_DRIFT",
+            "EXECUTION_CONTEXT_STALE"
+        ],
+        "decision": "DENY_BINDING",
+        "remediation_actions": [
+            "refresh_kyc_context",
+            "revalidate_authority_evidence",
+            "deny_binding_transition"
+        ],
+        "timestamp": "2026-05-14 14:33:51.264424+00:00"
+    },
+    {
+        "evidence_bundle_id": "1ddbe269-32e2-44ad-afe8-1a7cbfbbd3c9",
+        "event": {
+            "event_id": "978af54d-fbf4-474e-9e0e-07fe1450d6ba",
+            "event_type": "BINDING_EVIDENCE_MUTATED",
+            "node_id": "NODE_B",
+            "timestamp": "2026-05-14 14:33:50.854040+00:00",
+            "severity": "CRITICAL",
+            "authority_source": "governance_engine",
+            "rollback_window_remaining": 1.0,
+            "evidence_hash": "9e966d3388f6b3aae4397ddf",
+            "metadata": {}
+        },
+        "runtime_state": "COMMIT_INELIGIBLE",
+        "phase_transition": {
+            "from": "COMMIT_INELIGIBLE",
+            "to": "COMMIT_INELIGIBLE"
+        },
+        "triggers": [
+            "BINDING_EVIDENCE_DIVERGENCE",
+            "STALE_KYC_CONTEXT",
+            "POLICY_DIVERGENCE",
+            "REVALIDATION_REQUIRED",
+            "AUTHORITY_DRIFT"
+        ],
+        "reason_codes": [
+            "AUTHORITY_DRIFT",
+            "BIND_INTEGRITY_COLLAPSE",
+            "EXECUTION_CONTEXT_STALE"
+        ],
+        "decision": "DENY_BINDING",
+        "remediation_actions": [
+            "refresh_kyc_context",
+            "revalidate_authority_evidence",
+            "rebind_execution_intent",
+            "deny_binding_transition"
+        ],
+        "timestamp": "2026-05-14 14:33:51.466039+00:00"
+    },
+    {
+        "evidence_bundle_id": "750258de-a01b-4ed7-b562-eb95b8a9deb9",
+        "event": {
+            "event_id": "7d8c51b3-4f05-479f-8fbf-6f9fbd742f3e",
+            "event_type": "STATE_DIVERGENCE",
+            "node_id": "NODE_C",
+            "timestamp": "2026-05-14 14:33:50.854047+00:00",
+            "severity": "HIGH",
+            "authority_source": "governance_engine",
+            "rollback_window_remaining": 1.0,
+            "evidence_hash": "44f540b8ba94cd5e57c3c4d1",
+            "metadata": {}
+        },
+        "runtime_state": "COMMIT_INELIGIBLE",
+        "phase_transition": {
+            "from": "COMMIT_INELIGIBLE",
+            "to": "COMMIT_INELIGIBLE"
+        },
+        "triggers": [
+            "BINDING_EVIDENCE_DIVERGENCE",
+            "STALE_KYC_CONTEXT",
+            "POLICY_DIVERGENCE",
+            "ATTESTATION_FRAGMENTATION",
+            "REVALIDATION_REQUIRED",
+            "AUTHORITY_DRIFT"
+        ],
+        "reason_codes": [
+            "AUTHORITY_DRIFT",
+            "BIND_INTEGRITY_COLLAPSE",
+            "EXECUTION_CONTEXT_STALE"
+        ],
+        "decision": "DENY_BINDING",
+        "remediation_actions": [
+            "refresh_kyc_context",
+            "revalidate_authority_evidence",
+            "rebind_execution_intent",
+            "deny_binding_transition"
+        ],
+        "timestamp": "2026-05-14 14:33:51.671162+00:00"
+    },
+    {
+        "evidence_bundle_id": "88f4954a-ff52-4832-b475-c7a19dce49e7",
+        "event": {
+            "event_id": "25f539e3-7505-42ad-92f3-7ec1fe059938",
+            "event_type": "DOWNSTREAM_COMMITMENT_ESCALATED",
+            "node_id": "NODE_C",
+            "timestamp": "2026-05-14 14:33:50.854053+00:00",
+            "severity": "CRITICAL",
+            "authority_source": "governance_engine",
+            "rollback_window_remaining": 1.0,
+            "evidence_hash": "920c6f72174474b24cc5d906",
+            "metadata": {}
+        },
+        "runtime_state": "COMMIT_INELIGIBLE",
+        "phase_transition": {
+            "from": "COMMIT_INELIGIBLE",
+            "to": "COMMIT_INELIGIBLE"
+        },
+        "triggers": [
+            "BINDING_EVIDENCE_DIVERGENCE",
+            "STALE_KYC_CONTEXT",
+            "POLICY_DIVERGENCE",
+            "ATTESTATION_FRAGMENTATION",
+            "REVALIDATION_REQUIRED",
+            "AUTHORITY_DRIFT"
+        ],
+        "reason_codes": [
+            "AUTHORITY_DRIFT",
+            "BIND_INTEGRITY_COLLAPSE",
+            "EXECUTION_CONTEXT_STALE"
+        ],
+        "decision": "DENY_BINDING",
+        "remediation_actions": [
+            "refresh_kyc_context",
+            "revalidate_authority_evidence",
+            "rebind_execution_intent",
+            "deny_binding_transition"
+        ],
+        "timestamp": "2026-05-14 14:33:51.874854+00:00"
+    },
+    {
+        "evidence_bundle_id": "3630837e-866d-40a5-80eb-02dce371e819",
+        "event": {
+            "event_id": "6dd54bb0-3eb5-4140-85cf-4ba13e7f0431",
+            "event_type": "COMMIT_SCOPE_NARROWED",
+            "node_id": "NODE_C",
+            "timestamp": "2026-05-14 14:33:50.854059+00:00",
+            "severity": "CRITICAL",
+            "authority_source": "governance_engine",
+            "rollback_window_remaining": 1.0,
+            "evidence_hash": "5b652c3f2996487c2820a78c",
+            "metadata": {}
+        },
+        "runtime_state": "COMMIT_INELIGIBLE",
+        "phase_transition": {
+            "from": "COMMIT_INELIGIBLE",
+            "to": "COMMIT_INELIGIBLE"
+        },
+        "triggers": [
+            "BINDING_EVIDENCE_DIVERGENCE",
+            "STALE_KYC_CONTEXT",
+            "POLICY_DIVERGENCE",
+            "ATTESTATION_FRAGMENTATION",
+            "REVALIDATION_REQUIRED",
+            "AUTHORITY_DRIFT"
+        ],
+        "reason_codes": [
+            "AUTHORITY_DRIFT",
+            "BIND_INTEGRITY_COLLAPSE",
+            "EXECUTION_CONTEXT_STALE"
+        ],
+        "decision": "DENY_BINDING",
+        "remediation_actions": [
+            "refresh_kyc_context",
+            "revalidate_authority_evidence",
+            "rebind_execution_intent",
+            "deny_binding_transition"
+        ],
+        "timestamp": "2026-05-14 14:33:52.080104+00:00"
+    },
+    {
+        "evidence_bundle_id": "4cd9bd31-3fa9-4d14-ba99-5b52d9e4afa1",
+        "event": {
+            "event_id": "f1b3709a-4b2d-4c7b-a7b4-c7ea08cd92bc",
+            "event_type": "ROLLBACK_WINDOW_COLLAPSED",
+            "node_id": "NODE_C",
+            "timestamp": "2026-05-14 14:33:50.854064+00:00",
+            "severity": "CRITICAL",
+            "authority_source": "governance_engine",
+            "rollback_window_remaining": 0.2,
+            "evidence_hash": "a44e6648b0f43309cbe54851",
+            "metadata": {}
+        },
+        "runtime_state": "COMMIT_INELIGIBLE",
+        "phase_transition": {
+            "from": "COMMIT_INELIGIBLE",
+            "to": "COMMIT_INELIGIBLE"
+        },
+        "triggers": [
+            "ROLLBACK_COLLAPSE",
+            "BINDING_EVIDENCE_DIVERGENCE",
+            "STALE_KYC_CONTEXT",
+            "POLICY_DIVERGENCE",
+            "ATTESTATION_FRAGMENTATION",
+            "REVALIDATION_REQUIRED",
+            "AUTHORITY_DRIFT"
+        ],
+        "reason_codes": [
+            "AUTHORITY_DRIFT",
+            "BIND_INTEGRITY_COLLAPSE",
+            "ROLLBACK_WINDOW_COLLAPSED",
+            "EXECUTION_CONTEXT_STALE"
+        ],
+        "decision": "DENY_BINDING",
+        "remediation_actions": [
+            "refresh_kyc_context",
+            "revalidate_authority_evidence",
+            "rebind_execution_intent",
+            "deny_binding_transition"
+        ],
+        "timestamp": "2026-05-14 14:33:52.281843+00:00"
+    },
+    {
+        "evidence_bundle_id": "6509717d-214e-45a9-a0c6-9080c2759574",
+        "event": {
+            "event_id": "47583467-176e-4186-8f7a-01836cbf52fa",
+            "event_type": "IRREVERSIBLE_EFFECT_APPROACHING",
+            "node_id": "NODE_C",
+            "timestamp": "2026-05-14 14:33:50.854069+00:00",
+            "severity": "CRITICAL",
+            "authority_source": "governance_engine",
+            "rollback_window_remaining": 0.05,
+            "evidence_hash": "0c0d029059e1e66787fb9a1b",
+            "metadata": {}
+        },
+        "runtime_state": "COMMIT_INELIGIBLE",
+        "phase_transition": {
+            "from": "COMMIT_INELIGIBLE",
+            "to": "COMMIT_INELIGIBLE"
+        },
+        "triggers": [
+            "ROLLBACK_COLLAPSE",
+            "BINDING_EVIDENCE_DIVERGENCE",
+            "STALE_KYC_CONTEXT",
+            "POLICY_DIVERGENCE",
+            "ATTESTATION_FRAGMENTATION",
+            "REVALIDATION_REQUIRED",
+            "AUTHORITY_DRIFT"
+        ],
+        "reason_codes": [
+            "AUTHORITY_DRIFT",
+            "BIND_INTEGRITY_COLLAPSE",
+            "ROLLBACK_WINDOW_COLLAPSED",
+            "EXECUTION_CONTEXT_STALE"
+        ],
+        "decision": "DENY_BINDING",
+        "remediation_actions": [
+            "refresh_kyc_context",
+            "revalidate_authority_evidence",
+            "rebind_execution_intent",
+            "deny_binding_transition"
+        ],
+        "timestamp": "2026-05-14 14:33:52.487058+00:00"
+    }
+]
