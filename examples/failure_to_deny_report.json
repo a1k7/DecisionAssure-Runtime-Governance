@@ -1,0 +1,75 @@
+{
+  "case_1": {
+    "tx_id": "165e66da-0be7-4f81-beab-2c8af86642c8",
+    "final_verdict": "committed",
+    "audit_state": {
+      "state": "committed",
+      "payload": {
+        "action": "high_risk_transfer",
+        "amount": 5000
+      }
+    },
+    "retry_count": 0,
+    "replay_log": [
+      {
+        "time": 1779428296.1380749,
+        "event": "orchestration_approval_assumed",
+        "attempt": 0
+      },
+      {
+        "time": 1779428296.1380858,
+        "event": "execution",
+        "outcome": "committed",
+        "retry": 0
+      }
+    ]
+  },
+  "case_2": {
+    "tx_id": "82a7aea5-d9f4-4172-b973-cce086c10654",
+    "final_verdict": "committed",
+    "audit_state": {
+      "state": "committed",
+      "payload": {
+        "action": "high_risk_transfer",
+        "amount": 5000
+      }
+    },
+    "retry_count": 2,
+    "replay_log": [
+      {
+        "time": 1779428296.138113,
+        "event": "orchestration_approval_assumed",
+        "attempt": 0
+      },
+      {
+        "time": 1779428296.13812,
+        "event": "execution",
+        "outcome": "rejected",
+        "retry": 0
+      },
+      {
+        "time": 1779428296.1381261,
+        "event": "orchestration_approval_assumed",
+        "attempt": 1
+      },
+      {
+        "time": 1779428296.138133,
+        "event": "execution",
+        "outcome": "rejected",
+        "retry": 1
+      },
+      {
+        "time": 1779428296.1381361,
+        "event": "orchestration_approval_assumed",
+        "attempt": 2
+      },
+      {
+        "time": 1779428296.138143,
+        "event": "execution",
+        "outcome": "committed",
+        "retry": 2
+      }
+    ]
+  },
+  "conclusion": "Sticky reject prevents cascade; non-sticky allows corruption propagation."
+}

@@ -1,0 +1,538 @@
+[
+  {
+    "scenario": "Normal workflow",
+    "final_admissibility": 0.8499999999999999,
+    "final_authority_valid": true,
+    "final_rollback_viable": true,
+    "hidden_commitment_formed": false,
+    "commit_decision": "allow",
+    "amplification_factor_at_end": 1.2,
+    "transition_log": [
+      {
+        "timestamp": 1779428257.8867788,
+        "phase": "intent",
+        "event": "orchestration_start",
+        "admissibility": 1.0,
+        "authority_valid": true,
+        "rollback_viable": true,
+        "hidden_commitment": false,
+        "reconstruction_time_left": 0.0,
+        "details": {
+          "scenario": "Normal workflow"
+        }
+      },
+      {
+        "timestamp": 1779428257.886789,
+        "phase": "intent",
+        "event": "admissibility_degraded",
+        "admissibility": 0.95,
+        "authority_valid": true,
+        "rollback_viable": true,
+        "hidden_commitment": false,
+        "reconstruction_time_left": 0.0,
+        "details": {
+          "amount": 0.05,
+          "reason": "Step allowed"
+        }
+      },
+      {
+        "timestamp": 1779428257.886791,
+        "phase": "intent",
+        "event": "step_completed",
+        "admissibility": 0.95,
+        "authority_valid": true,
+        "rollback_viable": true,
+        "hidden_commitment": false,
+        "reconstruction_time_left": 0.0,
+        "details": {
+          "step_index": 0,
+          "outcome": "allowed"
+        }
+      },
+      {
+        "timestamp": 1779428257.886797,
+        "phase": "authorization",
+        "event": "admissibility_degraded",
+        "admissibility": 0.8999999999999999,
+        "authority_valid": true,
+        "rollback_viable": true,
+        "hidden_commitment": false,
+        "reconstruction_time_left": 0.0,
+        "details": {
+          "amount": 0.05,
+          "reason": "Step allowed"
+        }
+      },
+      {
+        "timestamp": 1779428257.8867981,
+        "phase": "authorization",
+        "event": "step_completed",
+        "admissibility": 0.8999999999999999,
+        "authority_valid": true,
+        "rollback_viable": true,
+        "hidden_commitment": false,
+        "reconstruction_time_left": 0.0,
+        "details": {
+          "step_index": 1,
+          "outcome": "allowed"
+        }
+      },
+      {
+        "timestamp": 1779428257.886801,
+        "phase": "execution",
+        "event": "admissibility_degraded",
+        "admissibility": 0.8499999999999999,
+        "authority_valid": true,
+        "rollback_viable": true,
+        "hidden_commitment": false,
+        "reconstruction_time_left": 0.0,
+        "details": {
+          "amount": 0.05,
+          "reason": "Step allowed"
+        }
+      },
+      {
+        "timestamp": 1779428257.886802,
+        "phase": "execution",
+        "event": "step_completed",
+        "admissibility": 0.8499999999999999,
+        "authority_valid": true,
+        "rollback_viable": true,
+        "hidden_commitment": false,
+        "reconstruction_time_left": 0.0,
+        "details": {
+          "step_index": 2,
+          "outcome": "allowed"
+        }
+      },
+      {
+        "timestamp": 1779428257.8868039,
+        "phase": "commit",
+        "event": "final_commit",
+        "admissibility": 0.8499999999999999,
+        "authority_valid": true,
+        "rollback_viable": true,
+        "hidden_commitment": false,
+        "reconstruction_time_left": 0.0,
+        "details": {
+          "decision": "allow"
+        }
+      }
+    ]
+  },
+  {
+    "scenario": "Hidden commitment",
+    "final_admissibility": 0.7999999999999999,
+    "final_authority_valid": true,
+    "final_rollback_viable": true,
+    "hidden_commitment_formed": true,
+    "commit_decision": "deny",
+    "amplification_factor_at_end": 1.2,
+    "transition_log": [
+      {
+        "timestamp": 1779428257.886816,
+        "phase": "intent",
+        "event": "orchestration_start",
+        "admissibility": 1.0,
+        "authority_valid": true,
+        "rollback_viable": true,
+        "hidden_commitment": false,
+        "reconstruction_time_left": 0.0,
+        "details": {
+          "scenario": "Hidden commitment"
+        }
+      },
+      {
+        "timestamp": 1779428257.8868191,
+        "phase": "intent",
+        "event": "admissibility_degraded",
+        "admissibility": 0.95,
+        "authority_valid": true,
+        "rollback_viable": true,
+        "hidden_commitment": false,
+        "reconstruction_time_left": 0.0,
+        "details": {
+          "amount": 0.05,
+          "reason": "Step allowed"
+        }
+      },
+      {
+        "timestamp": 1779428257.8868191,
+        "phase": "intent",
+        "event": "step_completed",
+        "admissibility": 0.95,
+        "authority_valid": true,
+        "rollback_viable": true,
+        "hidden_commitment": false,
+        "reconstruction_time_left": 0.0,
+        "details": {
+          "step_index": 0,
+          "outcome": "allowed"
+        }
+      },
+      {
+        "timestamp": 1779428257.886821,
+        "phase": "authorization",
+        "event": "hidden_commitment_formed",
+        "admissibility": 0.95,
+        "authority_valid": true,
+        "rollback_viable": true,
+        "hidden_commitment": true,
+        "reconstruction_time_left": 0.0,
+        "details": {
+          "source": "assume_approval"
+        }
+      },
+      {
+        "timestamp": 1779428257.886822,
+        "phase": "authorization",
+        "event": "admissibility_degraded",
+        "admissibility": 0.7999999999999999,
+        "authority_valid": true,
+        "rollback_viable": true,
+        "hidden_commitment": true,
+        "reconstruction_time_left": 0.0,
+        "details": {
+          "amount": 0.15,
+          "reason": "Hidden commitment formed (but not yet blocked)"
+        }
+      },
+      {
+        "timestamp": 1779428257.886823,
+        "phase": "authorization",
+        "event": "step_completed",
+        "admissibility": 0.7999999999999999,
+        "authority_valid": true,
+        "rollback_viable": true,
+        "hidden_commitment": true,
+        "reconstruction_time_left": 0.0,
+        "details": {
+          "step_index": 1,
+          "outcome": "allowed"
+        }
+      },
+      {
+        "timestamp": 1779428257.8868248,
+        "phase": "execution",
+        "event": "step_blocked",
+        "admissibility": 0.7999999999999999,
+        "authority_valid": true,
+        "rollback_viable": true,
+        "hidden_commitment": true,
+        "reconstruction_time_left": 0.0,
+        "details": {
+          "step_index": 2,
+          "reason": "Hidden commitment blocks continuation"
+        }
+      },
+      {
+        "timestamp": 1779428257.886826,
+        "phase": "commit",
+        "event": "final_commit",
+        "admissibility": 0.7999999999999999,
+        "authority_valid": true,
+        "rollback_viable": true,
+        "hidden_commitment": true,
+        "reconstruction_time_left": 0.0,
+        "details": {
+          "decision": "deny"
+        }
+      }
+    ]
+  },
+  {
+    "scenario": "Authority drift",
+    "final_admissibility": 0.5249999999999999,
+    "final_authority_valid": false,
+    "final_rollback_viable": true,
+    "hidden_commitment_formed": false,
+    "commit_decision": "escalate",
+    "amplification_factor_at_end": 1.2,
+    "transition_log": [
+      {
+        "timestamp": 1779428257.886833,
+        "phase": "intent",
+        "event": "orchestration_start",
+        "admissibility": 1.0,
+        "authority_valid": true,
+        "rollback_viable": true,
+        "hidden_commitment": false,
+        "reconstruction_time_left": 0.0,
+        "details": {
+          "scenario": "Authority drift"
+        }
+      },
+      {
+        "timestamp": 1779428257.8868349,
+        "phase": "intent",
+        "event": "admissibility_degraded",
+        "admissibility": 0.95,
+        "authority_valid": true,
+        "rollback_viable": true,
+        "hidden_commitment": false,
+        "reconstruction_time_left": 0.0,
+        "details": {
+          "amount": 0.05,
+          "reason": "Step allowed"
+        }
+      },
+      {
+        "timestamp": 1779428257.886838,
+        "phase": "intent",
+        "event": "step_completed",
+        "admissibility": 0.95,
+        "authority_valid": true,
+        "rollback_viable": true,
+        "hidden_commitment": false,
+        "reconstruction_time_left": 0.0,
+        "details": {
+          "step_index": 0,
+          "outcome": "allowed"
+        }
+      },
+      {
+        "timestamp": 1779428257.88684,
+        "phase": "authorization",
+        "event": "admissibility_degraded",
+        "admissibility": 0.8999999999999999,
+        "authority_valid": true,
+        "rollback_viable": true,
+        "hidden_commitment": false,
+        "reconstruction_time_left": 0.0,
+        "details": {
+          "amount": 0.05,
+          "reason": "Step allowed"
+        }
+      },
+      {
+        "timestamp": 1779428257.88684,
+        "phase": "authorization",
+        "event": "step_completed",
+        "admissibility": 0.8999999999999999,
+        "authority_valid": true,
+        "rollback_viable": true,
+        "hidden_commitment": false,
+        "reconstruction_time_left": 0.0,
+        "details": {
+          "step_index": 1,
+          "outcome": "allowed"
+        }
+      },
+      {
+        "timestamp": 1779428257.886842,
+        "phase": "execution",
+        "event": "authority_drift",
+        "admissibility": 0.8999999999999999,
+        "authority_valid": false,
+        "rollback_viable": true,
+        "hidden_commitment": false,
+        "reconstruction_time_left": 0.0,
+        "details": {
+          "reason": "Policy version changed mid\u2011flight"
+        }
+      },
+      {
+        "timestamp": 1779428257.886843,
+        "phase": "execution",
+        "event": "reconstruction_started",
+        "admissibility": 0.8999999999999999,
+        "authority_valid": false,
+        "rollback_viable": true,
+        "hidden_commitment": false,
+        "reconstruction_time_left": 2.0,
+        "details": {
+          "duration": 2.0
+        }
+      },
+      {
+        "timestamp": 1779428257.886844,
+        "phase": "execution",
+        "event": "admissibility_degraded",
+        "admissibility": 0.6499999999999999,
+        "authority_valid": false,
+        "rollback_viable": true,
+        "hidden_commitment": false,
+        "reconstruction_time_left": 2.0,
+        "details": {
+          "amount": 0.25,
+          "reason": "Policy drift during execution"
+        }
+      },
+      {
+        "timestamp": 1779428257.8868449,
+        "phase": "execution",
+        "event": "admissibility_degraded",
+        "admissibility": 0.5499999999999999,
+        "authority_valid": false,
+        "rollback_viable": true,
+        "hidden_commitment": false,
+        "reconstruction_time_left": 2.0,
+        "details": {
+          "amount": 0.1,
+          "reason": "Authority drift triggered, reconstruction started"
+        }
+      },
+      {
+        "timestamp": 1779428257.886847,
+        "phase": "execution",
+        "event": "admissibility_degraded",
+        "admissibility": 0.5249999999999999,
+        "authority_valid": false,
+        "rollback_viable": true,
+        "hidden_commitment": false,
+        "reconstruction_time_left": 2.0,
+        "details": {
+          "amount": 0.025,
+          "reason": "Amplification exceeds governance repair"
+        }
+      },
+      {
+        "timestamp": 1779428257.886848,
+        "phase": "execution",
+        "event": "step_completed",
+        "admissibility": 0.5249999999999999,
+        "authority_valid": false,
+        "rollback_viable": true,
+        "hidden_commitment": false,
+        "reconstruction_time_left": 2.0,
+        "details": {
+          "step_index": 2,
+          "outcome": "allowed"
+        }
+      },
+      {
+        "timestamp": 1779428257.886849,
+        "phase": "commit",
+        "event": "final_commit",
+        "admissibility": 0.5249999999999999,
+        "authority_valid": false,
+        "rollback_viable": true,
+        "hidden_commitment": false,
+        "reconstruction_time_left": 2.0,
+        "details": {
+          "decision": "escalate"
+        }
+      }
+    ]
+  },
+  {
+    "scenario": "Amplification > repair",
+    "final_admissibility": 0.7999999999999999,
+    "final_authority_valid": true,
+    "final_rollback_viable": true,
+    "hidden_commitment_formed": true,
+    "commit_decision": "deny",
+    "amplification_factor_at_end": 1.3,
+    "transition_log": [
+      {
+        "timestamp": 1779428257.8868558,
+        "phase": "intent",
+        "event": "orchestration_start",
+        "admissibility": 1.0,
+        "authority_valid": true,
+        "rollback_viable": true,
+        "hidden_commitment": false,
+        "reconstruction_time_left": 0.0,
+        "details": {
+          "scenario": "Amplification > repair"
+        }
+      },
+      {
+        "timestamp": 1779428257.886858,
+        "phase": "intent",
+        "event": "admissibility_degraded",
+        "admissibility": 0.95,
+        "authority_valid": true,
+        "rollback_viable": true,
+        "hidden_commitment": false,
+        "reconstruction_time_left": 0.0,
+        "details": {
+          "amount": 0.05,
+          "reason": "Step allowed"
+        }
+      },
+      {
+        "timestamp": 1779428257.886858,
+        "phase": "intent",
+        "event": "step_completed",
+        "admissibility": 0.95,
+        "authority_valid": true,
+        "rollback_viable": true,
+        "hidden_commitment": false,
+        "reconstruction_time_left": 0.0,
+        "details": {
+          "step_index": 0,
+          "outcome": "allowed"
+        }
+      },
+      {
+        "timestamp": 1779428257.8868601,
+        "phase": "authorization",
+        "event": "hidden_commitment_formed",
+        "admissibility": 0.95,
+        "authority_valid": true,
+        "rollback_viable": true,
+        "hidden_commitment": true,
+        "reconstruction_time_left": 0.0,
+        "details": {
+          "source": "assume_approval"
+        }
+      },
+      {
+        "timestamp": 1779428257.8868601,
+        "phase": "authorization",
+        "event": "admissibility_degraded",
+        "admissibility": 0.7999999999999999,
+        "authority_valid": true,
+        "rollback_viable": true,
+        "hidden_commitment": true,
+        "reconstruction_time_left": 0.0,
+        "details": {
+          "amount": 0.15,
+          "reason": "Hidden commitment formed (but not yet blocked)"
+        }
+      },
+      {
+        "timestamp": 1779428257.886861,
+        "phase": "authorization",
+        "event": "step_completed",
+        "admissibility": 0.7999999999999999,
+        "authority_valid": true,
+        "rollback_viable": true,
+        "hidden_commitment": true,
+        "reconstruction_time_left": 0.0,
+        "details": {
+          "step_index": 1,
+          "outcome": "allowed"
+        }
+      },
+      {
+        "timestamp": 1779428257.886862,
+        "phase": "execution",
+        "event": "step_blocked",
+        "admissibility": 0.7999999999999999,
+        "authority_valid": true,
+        "rollback_viable": true,
+        "hidden_commitment": true,
+        "reconstruction_time_left": 0.0,
+        "details": {
+          "step_index": 2,
+          "reason": "Hidden commitment blocks continuation"
+        }
+      },
+      {
+        "timestamp": 1779428257.886863,
+        "phase": "commit",
+        "event": "final_commit",
+        "admissibility": 0.7999999999999999,
+        "authority_valid": true,
+        "rollback_viable": true,
+        "hidden_commitment": true,
+        "reconstruction_time_left": 0.0,
+        "details": {
+          "decision": "deny"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,123 @@
+[
+  {
+    "timestamp": 1779428273.0157921,
+    "phase": "intent",
+    "event": "workflow_start",
+    "admissibility": 1.0,
+    "authority_valid": true,
+    "hidden_commitment": false,
+    "rollback_viable": true,
+    "details": {
+      "context": "Flight UA123 release"
+    }
+  },
+  {
+    "timestamp": 1779428273.015795,
+    "phase": "intent",
+    "event": "intent_received",
+    "admissibility": 1.0,
+    "authority_valid": true,
+    "hidden_commitment": false,
+    "rollback_viable": true,
+    "details": {
+      "pilot": "Captain Smith"
+    }
+  },
+  {
+    "timestamp": 1779428273.015798,
+    "phase": "maintenance_check",
+    "event": "maintenance_ok",
+    "admissibility": 1.0,
+    "authority_valid": true,
+    "hidden_commitment": false,
+    "rollback_viable": true,
+    "details": {}
+  },
+  {
+    "timestamp": 1779428273.0158,
+    "phase": "maintenance_check",
+    "event": "degradation",
+    "admissibility": 0.98,
+    "authority_valid": true,
+    "hidden_commitment": false,
+    "rollback_viable": true,
+    "details": {
+      "amount": 0.02,
+      "reason": "Normal degradation after check"
+    }
+  },
+  {
+    "timestamp": 1779428273.0158012,
+    "phase": "captain_review",
+    "event": "hidden_commitment",
+    "admissibility": 0.98,
+    "authority_valid": true,
+    "hidden_commitment": true,
+    "rollback_viable": true,
+    "details": {
+      "source": "captain_assumed_approval"
+    }
+  },
+  {
+    "timestamp": 1779428273.0158038,
+    "phase": "captain_review",
+    "event": "degradation",
+    "admissibility": 0.95,
+    "authority_valid": true,
+    "hidden_commitment": true,
+    "rollback_viable": true,
+    "details": {
+      "amount": 0.03,
+      "reason": "Hidden commitment adds risk"
+    }
+  },
+  {
+    "timestamp": 1779428273.015805,
+    "phase": "dispatch_approval",
+    "event": "authority_drift",
+    "admissibility": 0.95,
+    "authority_valid": false,
+    "hidden_commitment": true,
+    "rollback_viable": true,
+    "details": {
+      "reason": "New weather advisory not reviewed"
+    }
+  },
+  {
+    "timestamp": 1779428273.015806,
+    "phase": "dispatch_approval",
+    "event": "degradation",
+    "admissibility": 0.85,
+    "authority_valid": false,
+    "hidden_commitment": true,
+    "rollback_viable": true,
+    "details": {
+      "amount": 0.1,
+      "reason": "Authority drift"
+    }
+  },
+  {
+    "timestamp": 1779428273.015807,
+    "phase": "execution",
+    "event": "unsafe_execution",
+    "admissibility": 0.85,
+    "authority_valid": false,
+    "hidden_commitment": true,
+    "rollback_viable": false,
+    "details": {
+      "reason": "Hidden commitment + invalid authority"
+    }
+  },
+  {
+    "timestamp": 1779428273.015808,
+    "phase": "execution",
+    "event": "final_decision",
+    "admissibility": 0.85,
+    "authority_valid": false,
+    "hidden_commitment": true,
+    "rollback_viable": false,
+    "details": {
+      "decision": "deny"
+    }
+  }
+]
