@@ -74,29 +74,3 @@ DecisionAssure is currently an early-stage research and prototyping initiative e
 
 ---
 
-## 📁 Which files to add to your repo for Fort Signal
-
-From your existing files, add **only the clean, executable versions** (not PDFs). Here’s what to include:
-
-| File type | Which file to add | Where to place |
-|-----------|------------------|----------------|
-| **Main trace engine** | Use the code from `tdt_public_demo.py` (extract the `.py` from the PDF) – or better, use the `governance_trace_martin.py` from earlier | `examples/governance_trace_demo.py` |
-| **Aviation demo** | Extract `.py` from `operational_trace_demo.pdf` | `examples/aviation_flight_release.py` |
-| **TDT public trace** | Use the JSON output from `tdt_public_trace.json` (already correct) | `outputs/tdt_public_trace.json` |
-| **Sample output** | You can also add `operational_trace_aviation.json` from the aviation run | `outputs/aviation_trace.json` |
-
-**Do NOT add**:
-- Any PDF files (especially multi‑page PDFs of code) – they look unprofessional and are not executable.
-- The `tdt_public_trace2.pdf` – it’s garbled.
-- The `tdt_public_demo-2.pdf` – same issue.
-
----
-
-## 🚀 Action items before sending to Fort Signal
-
-1. **Update `README.md`** on GitHub with the appended content above.
-2. **Create `examples/` and `outputs/` folders** in your repo.
-3. **Add the `.py` files** (converted from PDFs or copied from previous conversations).
-4. **Add the `.json` trace files** to `outputs/`.
-5. **Commit and push**.
-
