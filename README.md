@@ -71,6 +71,8 @@ Research Status
 
 DecisionAssure is currently an early-stage research and prototyping initiative exploring deterministic runtime governance for asynchronous orchestration systems, autonomous agents, and high-consequence execution environments.
 
+## Collaborations
 
+- [Closing the Authority Gap: Combining Constraint Adherence (MTCP) with Causal Continuity (DecisionAssure)](./docs/collaborations/Closing_the_Authority_Gap_MTCP_DecisionAssure.pdf) – joint technical note with Ahmad Abby (MTCP). May 2026.
 ---
 
