@@ -1,0 +1,11 @@
+{
+  "statement": "This Ed25519 public key is the official signing key for DecisionAssure traces as of 2026-06-11.",
+  "owner": "DecisionAssure (Akhilesh Warik)",
+  "public_key_id": "decisionassure_prod_2026",
+  "fingerprint_sha256": "824a2dc2911e6b69481585edc8a895efc3731eecfa11a39af58a54ccade2a934",
+  "well_known_url": "https://a1k7.github.io/DecisionAssure-Runtime-Governance/.well-known/decisionassure-key",
+  "valid_from": "2026-06-11T00:00:00Z",
+  "revocation_contact": "warikakhilesh319@gmail.com",
+  "signature_base64": "EbmJoUCbg2pPJ7FRzVLFtmH06cmwWX+uPZ3lI3FdRmWdaCDR92NyyhqZEg5gLU7yPMmk/DsxhqYNxmwc7pWwCw==",
+  "signed_canonical": "{\"fingerprint_sha256\":\"824a2dc2911e6b69481585edc8a895efc3731eecfa11a39af58a54ccade2a934\",\"owner\":\"DecisionAssure (Akhilesh Warik)\",\"public_key_id\":\"decisionassure_prod_2026\",\"revocation_contact\":\"warikakhilesh319@gmail.com\",\"statement\":\"This Ed25519 public key is the official signing key for DecisionAssure traces as of 2026-06-11.\",\"valid_from\":\"2026-06-11T00:00:00Z\",\"well_known_url\":\"https://a1k7.github.io/DecisionAssure-Runtime-Governance/.well-known/decisionassure-key\"}"
+}
