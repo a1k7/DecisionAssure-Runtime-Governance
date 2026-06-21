@@ -1,12 +1,52 @@
 {
+  "schema_version": "1.2",
   "manifest_version": "1.0",
   "valid_from": "2026-06-21",
-  "layer": "runtime_governance",
-  "timing_axis": "continuous",
-  "claims_boundary": "decision_assure_trace_verification",
-  "controlling_test": "replayable_independent_verification",
-  "interoperability_doctrine": "evidence_driven_admissibility",
-  "composition": "none",
-  "machine_readable_status": true,
-  "manifest_digest": "sha256:7f1a8c3e9d2b5a6f4e8c1d2b3a4f5e6d7c8b9a0f1e2d3c4b5a6f7e8d9c0b1a2f3"
+  "valid_until": null,
+  "supersedes": null,
+  "layer": {
+    "layer_type": "witness",
+    "vendor_layer_name": "DecisionAssure",
+    "vendor_layer_descriptor": "Continuous admissibility verification and replayable governance traces for autonomous agents."
+  },
+  "timing_axis": {
+    "position": "pre-bind",
+    "description": "Operates continuously at every execution step, re-verifying identity, policy, delegation, and evidence freshness before each action commits."
+  },
+  "claims_boundary": {
+    "authoritative_layer_claim": "DecisionAssure verifies whether execution authority remains valid at the moment of reliance, producing replayable cryptographic traces that can be independently verified.",
+    "explicit_non_claims": [
+      "Does not execute or authorize execution",
+      "Does not certify or validate the underlying model or agent",
+      "Does not provide liability determination",
+      "Does not claim construction-level non-reachability"
+    ],
+    "consumer_boundary_constraint": "Consumers must not interpret DecisionAssure traces as evidence of model safety or certification. They are evidence of authority validity at the moment of execution.",
+    "forbidden_interpretations": [
+      "model_certification",
+      "liability_assignment",
+      "execution_authorization",
+      "authority_transfer",
+      "construction_level_non_reachability"
+    ]
+  },
+  "controlling_test": "Interoperability must increase reviewability without silently transferring authority across layers. DecisionAssure traces are designed to be consumed by any verifier that can replay the trace and confirm hash continuity, state legitimacy, and final decision correctness.",
+  "interoperability_doctrine": "GLM does not create interoperability through integration agreements. GLM creates interoperability through independently readable boundary declarations. DecisionAssure declares its boundary as evidence-driven admissibility verification with independent replay capability.",
+  "composition": {
+    "composable_with_types": [
+      "witness",
+      "closure",
+      "reviewability"
+    ],
+    "composable_with_manifests": []
+  },
+  "machine_readable_status": {
+    "boundary_readiness": "stable",
+    "execution_capability": false
+  },
+  "manifest_digest": {
+    "type": "sha256",
+    "value": "<8f520dbf226a1437f3b46e820639a7ede480837b6da43997e320b3461184076a>",
+    "canonicalization_method": "SHA-256 computed over the file as served, with manifest_digest.value set to the placeholder string <computed-at-publish-time> during computation."
+  }
 }
