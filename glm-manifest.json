@@ -46,7 +46,7 @@
   },
   "manifest_digest": {
     "type": "sha256",
-    "value": "<8f520dbf226a1437f3b46e820639a7ede480837b6da43997e320b3461184076a>",
+    "value": "8f520dbf226a1437f3b46e820639a7ede480837b6da43997e320b3461184076a",
     "canonicalization_method": "SHA-256 computed over the file as served, with manifest_digest.value set to the placeholder string <computed-at-publish-time> during computation."
   }
 }
