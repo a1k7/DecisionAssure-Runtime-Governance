@@ -1,0 +1,12 @@
+{
+  "manifest_version": "1.0",
+  "valid_from": "2026-06-21",
+  "layer": "runtime_governance",
+  "timing_axis": "continuous",
+  "claims_boundary": "decision_assure_trace_verification",
+  "controlling_test": "replayable_independent_verification",
+  "interoperability_doctrine": "evidence_driven_admissibility",
+  "composition": "none",
+  "machine_readable_status": true,
+  "manifest_digest": "sha256:7f1a8c3e9d2b5a6f4e8c1d2b3a4f5e6d7c8b9a0f1e2d3c4b5a6f7e8d9c0b1a2f3"
+}
