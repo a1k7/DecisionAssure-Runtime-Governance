@@ -75,4 +75,4 @@ DecisionAssure is currently an early-stage research and prototyping initiative e
 
 - [Closing the Authority Gap: Combining Constraint Adherence (MTCP) with Causal Continuity (DecisionAssure)](./docs/collaborations/Closing_the_Authority_Gap_MTCP_DecisionAssure.pdf) – joint technical note with Ahmad Abby (MTCP). May 2026.
 ---
-
+[![Sponsor](https://readme.cash/i/wx242d2i07.svg)](https://readme.cash/c/wx242d2i07)
